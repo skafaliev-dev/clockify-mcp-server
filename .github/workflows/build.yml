@@ -29,3 +29,6 @@ jobs:
     - name: Lint
       run: npm run lint
       continue-on-error: true
+
+    - name: Validate Dockerfile (build only)
+      run: docker build -t mcp-clockify .
