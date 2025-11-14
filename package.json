@@ -1,0 +1,44 @@
+{
+  "name": "clockify-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for Clockify time tracking - manage time entries, projects, tags, clients, tasks, and more",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node test/clockify-api.test.js",
+    "lint": "eslint src/**/*.js test/**/*.js"
+  },
+  "keywords": [
+    "mcp",
+    "clockify",
+    "time-tracking",
+    "model-context-protocol"
+  ],
+  "author": "Stoyan Kafaliev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skafaliev-dev/clockify-mcp-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/skafaliev-dev/clockify-mcp-server/issues"
+  },
+  "homepage": "https://github.com/skafaliev-dev/clockify-mcp-server#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "node-fetch": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0"
+  }
+}
