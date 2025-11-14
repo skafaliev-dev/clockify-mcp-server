@@ -2,6 +2,8 @@
 
 A Model Context Protocol (MCP) server for Clockify time tracking integration. This server enables AI assistants to interact with Clockify's API to manage time entries, projects, tags, clients, tasks, and more.
 
+![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 ## Features
 
 - **Workspaces**: Retrieve workspace information
@@ -12,6 +14,17 @@ A Model Context Protocol (MCP) server for Clockify time tracking integration. Th
 - **Tasks**: Create and manage tasks within projects
 - **Users**: Retrieve user information
 - **Reports**: Generate time tracking reports
+
+## Run with Docker
+
+You can run the MCP server in a Docker container:
+
+```bash
+docker build -t clockify-mcp-server .
+docker run --env CLOCKIFY_API_KEY=your_api_key_here -p 3000:3000 clockify-mcp-server
+```
+
+You can also pass other environment variables as needed (see Configuration section).
 
 ## Prerequisites
 
@@ -25,14 +38,23 @@ A Model Context Protocol (MCP) server for Clockify time tracking integration. Th
 
 2. Install dependencies:
 ```bash
+
+### Running Tests
+
+To run the test suite:
+
+```bash
+npm test
+```
 npm install
 ```
 
 3. Set up your environment variables (see Configuration below)
 
+This project is licensed under the terms of the MIT license. See the [LICENSE](./LICENSE) file for details.
+
 ## Configuration
 
-### Get Your Clockify API Key
 
 1. Log in to Clockify
 2. Go to Settings → Advanced → Manage API keys
