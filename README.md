@@ -53,6 +53,27 @@ CLOCKIFY_API_BASE_URL=https://api.clockify.me/api/v1  # Optional, defaults to th
 - UK: `https://euw2.clockify.me/api/v1`
 - AU: `https://apse2.clockify.me/api/v1`
 
+## Development
+
+### Project Structure
+
+```
+mcp/
+├── src/
+│   ├── server.js           # Main MCP server implementation
+│   └── clockify-api.js     # Clockify API client wrapper
+├── test/
+│   └── clockify-api.test.js # Basic tests for Clockify API client
+├── package.json            # Project dependencies and scripts
+├── clockify-mcp-spec.json  # API specification
+├── .env.example            # Example environment variables
+├── .github/
+│   └── workflows/
+│       └── build.yml       # CI workflow
+├── eslint.config.js        # ESLint configuration
+└── README.md               # This file
+```
+
 ## Usage
 
 ### Running the Server
